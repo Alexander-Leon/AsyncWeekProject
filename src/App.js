@@ -9,12 +9,12 @@ import Stack from './components/Stack/Stack.js'
 function App() {
   const classes = useStyles();
   return (
-   <Router>
+   <div>
      <Navbar />
      <main className={classes.app}>
       <Stack />
      </main>
-   </Router>
+     </div>
   );
 }
 

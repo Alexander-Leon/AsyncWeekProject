@@ -11,7 +11,7 @@ const Navbar = () => {
                 {menuItems.map((item, index)=> {
                     return (
                     <li key={index}>
-                        <a className={classes.navLinks} href={item.url}>{item.title}</a>
+                        <a className={classes.navLinks} href='#'>{item.title}</a>
                     </li>
                     )
                 })}
