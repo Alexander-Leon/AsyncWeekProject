@@ -41,5 +41,25 @@ export default createUseStyles({
     cell: {
         outline: '2px solid black',
         cursor: 'pointer'
+    },
+    square: {
+        display: 'flex',
+        width: '28px',
+        height: '28px',
+        margin: '1px',
+        backgroundColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    stacksquare:{
+        display: 'flex',
+        width: '28px',
+        height: '28px',
+        margin: '20px',
+        backgroundColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: '0'
     }
     })
