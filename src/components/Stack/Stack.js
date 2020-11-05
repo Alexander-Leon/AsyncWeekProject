@@ -72,7 +72,7 @@ return (
     <button className={classes.button} onClick={() => {stack.top ? removeClick() : setTotal(total)} }>Remove from stack</button>
 </div>
 <div>
-    {total}
+<div className={classes.total}>{total}</div>
 <Block num={inputNum} boxClass={classes.square} />
 <div>
 {children}

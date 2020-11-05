@@ -61,5 +61,16 @@ export default createUseStyles({
         alignItems: 'center',
         position: 'absolute',
         bottom: '0'
+    }, total:{
+        display: 'flex',
+        width: '25%',
+        height: '25%',
+        backgroundColor: '#00FF00',
+        position: 'absolute',
+        justifyContent: 'center',
+        alignItems: 'center',
+        left: '45%',
+        bottom: '35%',
+        fontSize: '32px'
     }
     })
