@@ -3,27 +3,28 @@ import {createUseStyles} from 'react-jss';
 export default createUseStyles({
     sideBar:{
         backgroundColor: '#87CEEB',
-        display: 'flex',
+        display: 'block',
         width: '15%',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '1.2rem',
         borderRight: '2px solid black',
+        borderTop: '2px solid black'
     },
     window: {
         display: 'flex',
         width: '100%',
-        height: '100%'
+        height: '90%',
+        position: 'relative',
     },
     button: {
-        display: 'flex',
+        display: 'inlineBlock',
         backgroundColor: 'black',
         color: 'white',
         border: 'none',
         textAlign: 'center',
         textDecoration: 'none',
-        display: 'inline-block',
         margin: '5vh',
         borderRadius: '50%',
         width: '8vw',

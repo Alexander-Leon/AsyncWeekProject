@@ -25,7 +25,7 @@ export class Stack {
 
 // -----------------------------------------
 // Queues
-class Queue {
+export class Queue {
   // Queue constructor function
   constructor () {
     this.queue = null
@@ -52,7 +52,7 @@ class Queue {
     this.queue = this.queue.next
     return rtrn
     } else {
-      return undefined
+      return null
     }
   }
 }
@@ -60,7 +60,7 @@ class Queue {
 // -----------------------------------------
 // Linked lists
 
-class LinkedList {
+export class LinkedList {
   // LinkedList constructor function
   constructor () {
     this.head = this.tail = null;
@@ -85,7 +85,7 @@ class LinkedList {
 
   // LinkedList.prototype.removeFromTail
   removeFromTail () {
-    let rtrnVal
+    let rtrnVal = null
     if (this.tail){
       if(this.head !== this.tail){
       rtrnVal = this.tail.item
@@ -99,19 +99,21 @@ class LinkedList {
         return rtrnVal
       }
     }
-    return undefined
+    return rtrnVal
   }
 
   // LinkedList.prototype.forEach
   forEach (callbackFunc) {
     // your code here
     let temp = this.head
+    if (temp){
     while (temp.next){
       callbackFunc(temp.item)
       temp = temp.next
     }
     callbackFunc(temp.item)
   }
+}
 }
 
 class ListNode {

@@ -1,13 +1,16 @@
 import {createUseStyles} from 'react-jss';
 
 export default createUseStyles({
-    window:{
-        backgroundColor: '#87CEEB',
-        width: '15%',
+    listsquare:{
         display: 'flex',
+        width: '28px',
+        height: '28px',
+        margin: '1px',
+        backgroundColor: 'red',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: '1.2rem',
-        borderRight: '2px solid black',
     },
+    listdiv: {
+        display: 'flex',
+    }
     })

@@ -21,8 +21,9 @@ export default createUseStyles({
       listStyle: 'none'
     },
     navLinks: {
-        color: 'white',
+        color: 'black',
         textDecoration: 'none',
+        backgroundColor: '#008080',
         padding: '0.5rem 1rem',
         '&:hover': {
             backgroundColor: '#6d76f7',

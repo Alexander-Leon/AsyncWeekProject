@@ -1,29 +1,23 @@
 import React, {useState} from 'react'
 import useSideStyles from '../SideBar.styles'
 import {Stack} from '../DataStructures/Data'
-import Block from './Block'
+import Block from '../Block'
 import anime from 'animejs'
 const Reactstack = () => {
 const classes = useSideStyles();
-const [stack, setStack] = useState(new Stack) 
+const [stack, setStack] = useState(new Stack()) 
 const [inputNum, setInput] = useState(0)
 const [total, setTotal] = useState(0)
 const [nums, setNums] = useState([])
 const [translateDistance, setDistance] = useState(1000)
 const children = []
 
-const removeClick = () => {
-    anime({
-        targets: '#target',
-        translateX: -(translateDistance),
-        easing: 'easeInOutSine',
-    })
+const removeClick = async () => {
     setTotal(total + stack.remove()); 
     setStack(stack); 
     nums.pop()
     setInput(0)
     setDistance(translateDistance+25)
-    
 }
 
 const addClick = () => {
@@ -43,9 +37,9 @@ const addClick = () => {
 
 for (let i = 0; i < nums.length; i++){
     if ((i+1 < nums.length)){
-    children.push(<div><Block key={i} number={i} id='' num={nums[i]} boxClass={classes.stacksquare} /></div>)
+    children.push(<div key={`${i}Stack`}><Block  number={i} id='' num={nums[i]} boxClass={classes.stacksquare} /></div>)
     } else {
-    children.push(<div><Block key={i} number={i} id='target' num={nums[i]}  boxClass={classes.stacksquare}/></div>)
+    children.push(<div key={`${i}Stack`} ><Block number={i} id='target' num={nums[i]}  boxClass={classes.stacksquare}/></div>)
     }
 }
 
@@ -71,13 +65,9 @@ return (
     <button className={classes.button} onClick={() => addClick()}>Add to Stack</button>
     <button className={classes.button} onClick={() => {stack.top ? removeClick() : setTotal(total)} }>Remove from stack</button>
 </div>
-<div>
 <div className={classes.total}>{total}</div>
 <Block num={inputNum} boxClass={classes.square} />
-<div>
 {children}
-</div>
-</div>
 </div>
 )
 
